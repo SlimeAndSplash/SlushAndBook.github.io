@@ -36,6 +36,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <style>
 
+ .videos {
+	 background: transparent;
+	 cursor: pointer;
+	 border: 2px solid white;
+	 color: white;
+	 text-align: center;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 border-radius: 100%;
+	 text-transform: uppercase;
+	 font-size: 20px;
+	 line-height: 30px;
+	 animation: ripple 1.5s linear infinite;
+	 transition: all 0.7s ease;
+}
+ .videos:hover {
+	 transform: scale(1.1);
+}
+ .videos:focus {
+	 outline: none;
+}
+ @keyframes ripple {
+	 0% {
+		 box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 0 3px rgba(255, 255, 255, 0.3), 0 0 0 5px rgba(255, 255, 255, 0.3);
+	}
+	 100% {
+		 box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 4px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
+	}
+}
+ 
+
+	    </style>
+  <style>
+
 .topnav {
 border-radius: 5px;
   overflow: hidden;
@@ -159,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-text">
     <h1 style="font-size:50px">Slime & Blob's Adventures</h1>
     <p>YouTube Content about ROBLOX</p>
-<button><i class="fa-solid fa-circle-play" style="display: inline;font-size: 15px;"></i><p style="display: inline;"> Watch Videos</p></button>
+<button class="videos"><i class="fa-solid fa-circle-play" style="display: inline;font-size: 15px;"></i><p style="display: inline;"> Watch Videos</p></button>
   </div>
 </div>
   <script>
