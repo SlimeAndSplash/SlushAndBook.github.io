@@ -34,6 +34,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style>
+		.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+	</style>
   <style>
 
  .videos {
@@ -189,11 +199,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     
 </div>
+	<script>
+		var fade1 = document.getElementById('fade1');
+		var fade2 = document.getElementById('fade2');
+		var fade3 = document.getElementById('fade3');
+		
+		fade1.classname += "visible"
+		fade2.classname += "visible"
+		fade3.classname += "videos visible"
+	</script>
+		
 <div class="hero-image">
   <div class="hero-text">
-    <h1 style="font-size:50px">Slime & Blob's Adventures</h1>
-    <p>YouTube Content about ROBLOX</p>
-<button class="videos"><i class="fa-solid fa-circle-play" style="display: inline;font-size: 15px;"></i><p style="display: inline;"> Watch Videos</p></button>
+    <h1 style="font-size:50px" class="hidden" id="fade1">Slime & Blob's Adventures</h1>
+    <p class="hidden" id="fade2">YouTube Content about ROBLOX</p>
+<button class="videos hidden" id="fade3"><i class="fa-solid fa-circle-play" style="display: inline;font-size: 15px;"></i><p style="display: inline;"> Watch Videos</p></button>
   </div>
 </div>
   <script>
