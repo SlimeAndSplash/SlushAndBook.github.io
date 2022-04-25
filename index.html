@@ -34,14 +34,378 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<style>
-		.hidden {
-  opacity: 0;
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Raleway);
+body{
+	background:#2c3e50;
+}
+/*=== Basic box styling  ===*/
+.box {
+    background: #2ecc71 none repeat scroll 0 0;
+    color: white;
+    float: left;
+    font-family: "Raleway",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    height: 150px;
+    line-height: 150px;
+    margin: 1%;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 25%;
 }
 
-.visible {
-  opacity: 1;
-  transition: opacity 1s ease-out;
+/*=== Trigger  ===*/
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+  
+/*=== Optional Delays, change values here  ===*/
+.one {
+-webkit-animation-delay: 0.5s;
+-moz-animation-delay: 0.5s;
+animation-delay: 0.5s;
+}
+
+.two {
+-webkit-animation-delay: 1.5s;
+-moz-animation-delay: 1.5s;
+animation-delay: 1.5s;
+}
+
+.three {
+-webkit-animation-delay: 2.5s;
+-moz-animation-delay: 2.5s;
+animation-delay: 2.5s;
+}
+
+.four {
+-webkit-animation-delay: 3.5s;
+-moz-animation-delay: 3.5s;
+animation-delay: 3.5s;
+}
+
+.five {
+-webkit-animation-delay: 4.5s;
+-moz-animation-delay: 4.5s;
+animation-delay: 4.5s;
+}
+
+.six {
+-webkit-animation-delay: 5.5s;
+-moz-animation-delay: 5.5s;
+animation-delay: 5.5s;
+}
+
+.seven {
+-webkit-animation-delay: 6.5s;
+-moz-animation-delay: 6.5s;
+animation-delay: 6.5s;
+}
+
+.eight {
+-webkit-animation-delay: 7.5s;
+-moz-animation-delay: 7.5s;
+animation-delay: 7.5s;
+}
+
+
+
+/*=== Animations start here  ===*/
+
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+/*=== FADE IN DOWN ===*/
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+ }
+@-webkit-keyframes fadeInDown {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+}
+@keyframes fadeInDown {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+} 
+
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+/*=== FADE IN  ===*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+/*=== FADE IN UP Big ===*/
+.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+  }
+@-webkit-keyframes fadeInUpBig {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 2000px, 0);
+	transform: translate3d(0, 2000px, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+	}
+}
+@keyframes fadeInUpBig {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 2000px, 0);
+	transform: translate3d(0, 2000px, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+	}
+} 
+
+/*=== FADE IN DOWN Big ===*/
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+@-webkit-keyframes fadeInDownBig {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -2000px, 0);
+	transform: translate3d(0, -2000px, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+}
+@keyframes fadeInDownBig {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -2000px, 0);
+	transform: translate3d(0, -2000px, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+} 
+
+/*=== FADE IN LEFT Big ===*/
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+@-webkit-keyframes fadeInLeftBig {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(-2000px, 0, 0);
+	transform: translate3d(-2000px, 0, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+}
+@keyframes fadeInLeftBig {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(-2000px, 0, 0);
+	transform: translate3d(-2000px, 0, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+} 
+
+/*=== FADE IN RIGHT Big ===*/
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+  }
+@-webkit-keyframes fadeInRightBig {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(2000px, 0, 0);
+	transform: translate3d(2000px, 0, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+}
+@keyframes fadeInRightBig {
+0% {
+	opacity: 0;
+	-webkit-transform: translate3d(2000px, 0, 0);
+	transform: translate3d(2000px, 0, 0);
+}
+100% {
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+}
+
+/* Demo Purpose Only*/
+/* Demo Purpose Only*/
+.demo {
+  font-family: 'Raleway', sans-serif;
+	color:#fff;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+.demo a{
+  font-family: 'Raleway', sans-serif;
+color: #2ecc71;		
 }
 	</style>
   <style>
@@ -199,22 +563,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     
 </div>
-	<script>
-		var fade1 = document.getElementById('fade1');
-		var fade2 = document.getElementById('fade2');
-		var fade3 = document.getElementById('fade3');
-		
-		fade1.classList.add("visible");
-		fade2.classList.add("visible");
-		fade3.classList.add("videos");
-		fade3.classList.add("visible");
-	</script>
+
 		
 <div class="hero-image">
   <div class="hero-text">
-    <h1 style="font-size:50px" class="hidden" id="fade1">Slime & Blob's Adventures</h1>
-    <p class="hidden" id="fade2">YouTube Content about ROBLOX</p>
-<button class="videos hidden" id="fade3"><i class="fa-solid fa-circle-play" style="display: inline;font-size: 15px;"></i><p style="display: inline;"> Watch Videos</p></button>
+	      <div class="box animate fadeInUp one">
+    <h1 style="font-size:50px;">Slime & Blob's Adventures</h1>
+	  </div>
+	      <div class="box animate fadeInUp one">
+    <p>YouTube Content about ROBLOX</p>
+	  </div>
+	      <div class="box animate fadeInUp one">
+
+<button><i class="fa-solid fa-circle-play" style="display: inline;font-size: 15px;"></i><p style="display: inline;"> Watch Videos</p></button></div>
   </div>
 </div>
   <script>
