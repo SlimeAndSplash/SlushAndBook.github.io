@@ -2,28 +2,6 @@
 <html>
   <!-- Hey there source code lurker, it is me, the programmer of the website, also known as Blob, oh yeah everything here is owned by us, code, images, etc (C) 2022 Slime & Blob's Adventures-->
 <head>
-	    <style>
-.card {
-background: #3A3F44;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 25%;
-  border-radius: 5px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.img {
-  border-radius: 5px 5px 0 0;
-  width:100%;
-}
-
-.container {
-  padding: 2px 16px;
-}
-</style>
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -76,7 +54,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #4e5d94;
 }
 </style>
-
 <style>
 
 /*=== Trigger  ===*/
@@ -547,7 +524,7 @@ body, html {
 }
 
 .hero-image {
-  background-image: url("banner.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("banner.png");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -584,7 +561,7 @@ body, html {
 }
 </style>
 </head>
-<body style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #38456d;">
+<body style="background-color: #38456d;">
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3FD5KH"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -618,44 +595,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button class="videos" onclick="videosyt();"><i class="fa-solid fa-circle-play" style="display: inline;font-size: 15px;"></i><p style="display: inline;"> Watch Videos</p></button></div>
   </div>
 </div>
-	    <script>
-
-    
-    const APIKey = 'AIzaSyDmvxTN_qvIFBdLWnqPaRzS684VMSc-2Es';
-    const Userid = 'UCCOoOiNoMdrdEkEKUd4Bpvg';
-    const subscriberCount= document.getElementById('subscriberCount');
-    const viewCount = document.getElementById('viewCount');
-    const videoCount = document.getElementById('videoCount');
-
-   
-
-    let getdata = () => {
-	
-        fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${Userid}&key=${APIKey}`)
-        .then(response => {
-            return response.json()
-        })
-        .then(data => {
-            console.log(data);
-            subscriberCount.innerHTML = data["items"][0].statistics.subscriberCount;
-            viewCount.innerHTML = data["items"][0].statistics.viewCount;
-            videoCount.innerHTML = data["items"][0].statistics.videoCount;
-            
-        })
-
-    }
-
-   getdata();
-    </script>
-	<div class="card">
-		<center>
-<img src="https://raw.githubusercontent.com/SlimeAndBlob/SlimeAndBlob.github.io/main/people-group-solid.svg" class="img">
-		</center>
-<center>
-<br>
-    <div id="subscriberCount" style="font-size:30px; color:white;"></div><br><p style="font-size:30px; color:white;">Subscribers</p>
-    </center>
-    </div>
   <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
