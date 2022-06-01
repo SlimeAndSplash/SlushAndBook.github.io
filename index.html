@@ -47,6 +47,30 @@ body {
     }
 	</style>
 	<style>
+		.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.zoom:hover {
+  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+	</style>
+	<style>
 /* width */
 ::-webkit-scrollbar {
   width: 15px;
@@ -622,7 +646,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button class="videos" onclick="videosyt();"><i class="fa-solid fa-circle-play" style="display: inline;font-size: 15px;"></i><p style="display: inline;"> Watch Videos</p></button></div>
   </div>
 </div>
-	
+	<div class="card zoom" style="float:left;text-align: center; ">
+  <i class="fa-solid fa-face-laugh-squint" style="font-size: 140px"></i>
+  <div class="container">
+    <h1><b>More than null views</b></h1> 
+  </div>
+</div>
 	<footer style="z-index: 5;
     position: relative;
     width: 100%;
