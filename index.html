@@ -37,7 +37,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><style>html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+	</style>
 	<style>
 		.goog-te-banner-frame.skiptranslate {
     display: none !important;
@@ -650,6 +654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const Userid = 'UCCOoOiNoMdrdEkEKUd4Bpvg';
     const subscriberCount= document.getElementById('sub');
     const viewCount = document.getElementById('view');
+	
 
    
 
@@ -661,8 +666,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         })
         .then(data => {
             console.log(data);
-            subscriberCount.innerHTML = data["items"][0].statistics.subscriberCount;
-            viewCount.innerHTML = data["items"][0].statistics.viewCount;            
+		const subtext = "Around "
+		const subtext2 = " subscribers";
+		const viewtext = "More than "
+		const viewstext2 = " subscribers";
+		const view = data["items"][0].statistics.viewCount;
+		const sub = data["items"][0].statistics.subscriberCount;
+            subscriberCount.innerHTML = subtext.concat(sub,subtext2);
+            viewCount.innerHTML = viewtext.concat(view,viewstext2);      
         })
 
     }
@@ -675,9 +686,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 		<div class="card zoom" style="float:right;text-align: center; ">
-  <i class="fa-solid fa-face-laugh-squint" style="font-size: 140px"></i>
-  <div class="container">
-    <h1 id="sub"><b>More than null views</b></h1> 
+<i class="fa-solid fa-eyes" style="font-size:140px"></i>  <div class="container">
+    <h1 id="view"><b>More than null views</b></h1> 
   </div>
 </div>
 	<footer style="z-index: 5;
